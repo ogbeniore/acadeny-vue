@@ -1,9 +1,10 @@
 <template>
   <div id="app">
-    <!-- <img src="./assets/hero-image.jpg" alt="hero"> -->
+    <img :src="imageUrl" :alt="hero">
     <my-header></my-header>
     <contact-form></contact-form>
     <computed></computed>
+    <Login />
   </div>
 </template>
 
@@ -11,13 +12,21 @@
 import MyHeader from './components/Header.vue'
 import ContactForm from './components/ContactForm.vue'
 import Computed from './components/Computed.vue'
+import Login from './components/Login.vue'
 
 export default {
   name: 'app',
   components: {
     MyHeader,
     ContactForm,
-    Computed
+    Computed,
+    Login,
+  },
+  data(){
+    return{
+      imageUrl: 'http://image.blingee.com/images19/content/output/000/000/000/79b/776844392_1899848.gif',
+      hero: 'Image of Girl'
+    }
   }
 }
 </script>
