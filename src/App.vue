@@ -1,6 +1,96 @@
 <template>
   <div id="app">
     <my-header :pageName="name">
+      <table>
+        <thead>
+          <tr>
+            <th>rrrr</th>
+            <th>tttt</th>
+            <th>ttyttt</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>rhbffhb</td>
+            <td>rkjbnkjhb</td>
+            <td>rjkbkjbnf</td>
+          </tr>
+          <tr>
+            <td>rhbffhb</td>
+            <td>rkjbnkjhb</td>
+            <td>rjkbkjbnf</td>
+          </tr>
+          <tr>
+            <td>rhbffhb</td>
+            <td>rkjbnkjhb</td>
+            <td>rjkbkjbnf</td>
+          </tr>
+          <tr>
+            <td>rhbffhb</td>
+            <td>rkjbnkjhb</td>
+            <td>rjkbkjbnf</td>
+          </tr>
+          <tr>
+            <td>rhbffhb</td>
+            <td>rkjbnkjhb</td>
+            <td>rjkbkjbnf</td>
+          </tr>
+          <tr>
+            <td>rhbffhb</td>
+            <td>rkjbnkjhb</td>
+            <td>rjkbkjbnf</td>
+          </tr>
+        </tbody>
+      </table>
+    </my-header>
+    <my-header pageName="jdjdjj">
+      <template v-slot:ore>
+        <label for="lol">Lolo</label>
+        <input type="text" name="" id="">
+      </template>
+      <template v-slot:bottom> 
+        <table>
+          <thead>
+            <tr>
+              <th>rrrr</th>
+              <th>tttt</th>
+              <th>ttyttt</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>rhbffhb</td>
+              <td>rkjbnkjhb</td>
+              <td>rjkbkjbnf</td>
+            </tr>
+            <tr>
+              <td>rhbffhb</td>
+              <td>rkjbnkjhb</td>
+              <td>rjkbkjbnf</td>
+            </tr>
+            <tr>
+              <td>rhbffhb</td>
+              <td>rkjbnkjhb</td>
+              <td>rjkbkjbnf</td>
+            </tr>
+            <tr>
+              <td>rhbffhb</td>
+              <td>rkjbnkjhb</td>
+              <td>rjkbkjbnf</td>
+            </tr>
+            <tr>
+              <td>rhbffhb</td>
+              <td>rkjbnkjhb</td>
+              <td>rjkbkjbnf</td>
+            </tr>
+            <tr>
+              <td>rhbffhb</td>
+              <td>rkjbnkjhb</td>
+              <td>rjkbkjbnf</td>
+            </tr>
+          </tbody>
+        </table>
+      </template>
     </my-header>
     <todo-list />
   </div>

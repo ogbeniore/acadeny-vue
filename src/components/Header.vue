@@ -2,6 +2,8 @@
   <header>
     <h1>{{ pageName }}</h1>
     <h2>{{ pageSubtitle }}</h2>
+    <slot name="bottom"></slot>
+    <slot name="ore"></slot>
   </header>
 </template>
 
