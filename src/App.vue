@@ -1,31 +1,69 @@
 <template>
   <div id="app">
-    <img :src="imageUrl" :alt="hero">
-    <my-header></my-header>
-    <contact-form></contact-form>
-    <computed></computed>
-    <Login />
+    <my-header
+      :page-subtitle="subtitle">
+    </my-header>
+    <img
+      :src="imageUrl"
+      :alt="hero"
+      :class="{'red-border': isRed}"
+      class="img-fluid">
+    <todo-list />
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    
+    <MyHeader
+      v-for="header in myHeaders"
+      :key="header.id"
+      :page-name="header.name"
+      :page-subtitle="header.subtitle"  
+    />
   </div>
 </template>
 
 <script>
 import MyHeader from './components/Header.vue'
-import ContactForm from './components/ContactForm.vue'
-import Computed from './components/Computed.vue'
-import Login from './components/Login.vue'
+import TodoList from './components/TodoList.vue'
 
 export default {
   name: 'app',
   components: {
     MyHeader,
-    ContactForm,
-    Computed,
-    Login,
+    TodoList
   },
   data(){
     return{
       imageUrl: 'http://image.blingee.com/images19/content/output/000/000/000/79b/776844392_1899848.gif',
-      hero: 'Image of Girl'
+      hero: 'Image of Girl',
+      imgClass: 'red-border',
+      isRed: true,
+      name: 'My Todo App',
+      subtitle: 'Hello world',
+      myHeaders: [
+        {
+          id: 1,
+          name: 'Headr 1',
+          subtitle: 'sub 1'
+        },
+        {
+          id: 2,
+          name: 'Headr 2',
+          subtitle: 'sub 2'
+        },
+        {
+          id: 3,
+          name: 'Headr 3',
+          subtitle: 'sub 3'
+        },
+        {
+          id: 4,
+          name: 'Headr 4',
+          subtitle: 'sub 4'
+        },
+      ]
     }
   }
 }
@@ -39,5 +77,12 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+.red-border {
+  border: 2px solid red;
+}
+.img-fluid {
+  width: 100%;
+  height: auto;
 }
 </style>

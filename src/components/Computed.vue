@@ -44,11 +44,11 @@
         </tr>
       </thead>
       <tbody>
-        <tr v-for="(item, index) in list" v-bind:key="index">
-          <td>{{ item.name }}</td>
-          <td>{{ item.price }}</td>
-          <td>{{ item.quantity }}</td>
-          <td>{{ item.price * item.quantity }}</td>
+        <tr v-for="(ore, index) in list" v-bind:key="index">
+          <td>{{ ore.name }}</td>
+          <td>{{ ore.price }}</td>
+          <td>{{ ore.quantity }}</td>
+          <td>{{ ore.price * ore.quantity }}</td>
         </tr>
       </tbody>
     </table>
