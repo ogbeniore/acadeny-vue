@@ -7,25 +7,24 @@
     <h1>Total items: {{ total }}</h1>
     <h1>Deleted items: {{ deletedItems }}</h1>
     <ul>
-      <li v-for="(todo, index) in list" :key="index">
-        {{todo}}
-        <button @click="deleteItem(index)">delete</button>
-      </li>
+      <todo-list-item
+        v-for="(todo, index) in list"
+        :key="index"
+        :todo-item="todo"
+        @delete="deleteItem(index)"
+        />
     </ul>
-    <header>
-      <h1>Welcome to my World</h1>
-      <p>Hello, I'm oreoluwa, I am a frontend develope</p>
-    </header>
-    <section>
-      <h2>About Me</h2>
-      <p>blah blah blas</p>
-    </section>
   </div>
 </template>
 
 <script>
+import TodoListItem from './TodoListItem.vue'
+
 export default {
   name: 'TodoList',
+  components: {
+    TodoListItem
+  },
   data() {
     return {
       newTodo: '',
